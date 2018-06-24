@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Winwink.LearnCsharpCollection.Common
 {
-    public class Timing
+    public class Timing : ITiming
     {
         private TimeSpan _startTime;
         private TimeSpan _duraction;
@@ -26,12 +26,48 @@ namespace Winwink.LearnCsharpCollection.Common
 
         public void StopTime()
         {
-            _duraction = Process.GetCurrentProcess().Threads[0].UserProcessorTime.Subtract(_startTime); 
+            _duraction = Process.GetCurrentProcess().Threads[0].UserProcessorTime.Subtract(_startTime);
         }
 
         public TimeSpan Result()
         {
             return _duraction;
         }
+    }
+
+    public class StopWatchTiming : ITiming
+    {
+        private TimeSpan _startTime;
+        private TimeSpan _duraction;
+        private Stopwatch _stopWatch;
+        public StopWatchTiming()
+        {
+            _startTime = new TimeSpan(0);
+            _duraction = new TimeSpan(0);
+            _stopWatch = new Stopwatch();
+        }
+
+        public void StartTime()
+        {
+            _stopWatch.Start();
+        }
+
+        public void StopTime()
+        {
+            _stopWatch.Stop();
+            _duraction = _stopWatch.Elapsed;
+        }
+
+        public TimeSpan Result()
+        {
+            return _duraction;
+        }
+    }
+
+    public interface ITiming
+    {
+        void StartTime();
+        void StopTime();
+        TimeSpan Result();
     }
 }

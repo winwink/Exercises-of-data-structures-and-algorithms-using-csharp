@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="chapter1_Collection\chapter1.cs" />
+    <Compile Include="chapter1_Collection\Exercises3_Chapter1.cs" />
+    <Compile Include="chapter1_Collection\Exercises4_BuildYourOwnCollection.cs" />
     <Compile Include="chapter1_Collection\MyCollection.cs" />
+    <Compile Include="chapter1_Collection\OriginCollection.cs" />
     <Compile Include="chapter1_Collection\Utility.cs" />
     <Compile Include="Common\Timing.cs" />
     <Compile Include="Program.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,14 @@ namespace Winwink.LearnCsharpCollection.chapter1_Collection
             for (int i = 0; i <= arr.GetUpperBound(0); i++)
             {
                 Console.Write(arr[i] + " ");
+            }
+        }
+
+        public static void BuildList(IList list)
+        {
+            for (int i = 0; i < 50000000; i++)
+            {
+                list.Add(i);
             }
         }
     }
