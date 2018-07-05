@@ -48,6 +48,18 @@
     <Compile Include="chapter1_Collection\MyCollection.cs" />
     <Compile Include="chapter1_Collection\OriginCollection.cs" />
     <Compile Include="chapter1_Collection\Utility.cs" />
+    <Compile Include="chapter2\chapter2.cs" />
+    <Compile Include="chapter2\Exercises1_Course.cs" />
+    <Compile Include="chapter2\Utility.cs" />
+    <Compile Include="chapter3\CArray.cs" />
+    <Compile Include="chapter3\chapter3.cs" />
+    <Compile Include="chapter3\Utility.cs" />
+    <Compile Include="chapter4\chapter4.cs" />
+    <Compile Include="chapter4\Utility.cs" />
+    <Compile Include="chapter5\ArithMeticExpression.cs" />
+    <Compile Include="chapter5\chapter5.cs" />
+    <Compile Include="chapter5\CStack.cs" />
+    <Compile Include="chapter5\Utility.cs" />
     <Compile Include="Common\Timing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,5 +67,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

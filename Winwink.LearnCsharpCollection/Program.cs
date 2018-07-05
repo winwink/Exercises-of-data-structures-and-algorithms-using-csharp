@@ -20,7 +20,22 @@ namespace Winwink.LearnCsharpCollection
             //Exercises3_Chapter1.ArrayListTest();
 
             //Exercises4_BuildYourOwnCollection.Main1();
-            Exercises4_BuildYourOwnCollection.Main5();
+            //Exercises4_BuildYourOwnCollection.Main5();
+
+            //chapter2.chapter2.Main2();
+            //chapter2.Exercises1_Course.Main1();
+
+            //chapter3.chapter3.Main1();
+            //chapter3.chapter3.Main2_BubbleSort();
+            //chapter3.chapter3.Main3_SelectionSort();
+            //chapter3.chapter3.Main4_InsertionSort();
+
+            //chapter4.chapter4.Main1();
+            //chapter4.chapter4.Main2();
+
+            //chapter5.chapter5.Main1();
+            chapter5.chapter5.Main2();
+            Console.WriteLine("Input new line to close...");
             Console.ReadLine();
         }
     }

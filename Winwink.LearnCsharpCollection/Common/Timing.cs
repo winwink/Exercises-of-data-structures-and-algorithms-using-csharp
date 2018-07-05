@@ -33,6 +33,16 @@ namespace Winwink.LearnCsharpCollection.Common
         {
             return _duraction;
         }
+
+        public TimeSpan ShowResult(Action a)
+        {
+            StartTime();
+            a();
+            StopTime();
+            var time = Result();
+            Console.WriteLine("use time" + time.TotalSeconds.ToString());
+            return time;
+        }
     }
 
     public class StopWatchTiming : ITiming
@@ -62,6 +72,16 @@ namespace Winwink.LearnCsharpCollection.Common
         {
             return _duraction;
         }
+
+        public TimeSpan ShowResult(Action a)
+        {
+            StartTime();
+            a();
+            StopTime();
+            var time = Result();
+            Console.Write("use time" + time.TotalSeconds.ToString());
+            return time;
+        }
     }
 
     public interface ITiming
@@ -69,5 +89,7 @@ namespace Winwink.LearnCsharpCollection.Common
         void StartTime();
         void StopTime();
         TimeSpan Result();
+
+        TimeSpan ShowResult(Action a);
     }
 }
