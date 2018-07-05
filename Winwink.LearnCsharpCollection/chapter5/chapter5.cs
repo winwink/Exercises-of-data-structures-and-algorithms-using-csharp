@@ -22,7 +22,7 @@ namespace Winwink.LearnCsharpCollection.chapter5
 
         public static void Main2()
         {
-            ArithMeticExpression expression = new ArithMeticExpression("10 + 5 - 6 + 7");
+            ArithMeticExpression expression = new ArithMeticExpression("10 + 5 - 6 * 7");
             var result = expression.Result();
             Console.WriteLine("Expression :" + "10 + 5 - 6 + 7" + ", Result:" + result);
         }
