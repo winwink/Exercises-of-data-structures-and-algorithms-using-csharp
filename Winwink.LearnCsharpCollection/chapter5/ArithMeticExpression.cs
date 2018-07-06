@@ -48,9 +48,9 @@ namespace Winwink.LearnCsharpCollection.chapter5
         {
             var arr = _expression.Split(new string[] { " " }, StringSplitOptions.None);
             Queue<string> qu = new Queue<string>(arr);
-            while(qu.Count>0 || _numbers.Count>1)
+            while (qu.Count > 0 || _numbers.Count > 1)
             {
-                if(_numbers.Count ==2)
+                if (_numbers.Count == 2)
                 {
                     var value2 = _numbers.Pop();
                     var value1 = _numbers.Pop();
@@ -62,7 +62,7 @@ namespace Winwink.LearnCsharpCollection.chapter5
                 {
                     var s = qu.Dequeue();
                     var isInt = IsInteger(s);
-                    if(isInt.Item1)
+                    if (isInt.Item1)
                     {
                         _numbers.Push(isInt.Item2);
                     }
@@ -75,11 +75,34 @@ namespace Winwink.LearnCsharpCollection.chapter5
             return _numbers.Peek();
         }
 
-        private Tuple<bool,int> IsInteger(string value)
+        //10+5*2-6/3+2-1=19
+        public double Result_V2()
+        {
+            //_expression = _expression.Replace(" ", "");
+            //StringBuilder sb = new StringBuilder();
+            //Queue<char> qu = new Queue<char>(_expression.ToArray());
+            //while (qu.Count > 0 || _numbers.Count > 1)
+            //{
+            //    var c = qu.Dequeue();
+            //    if (!IsOperator(c))
+            //    {
+            //        sb.Append(c);
+            //    }
+            //    else
+            //    {
+            //        _operators.Push(c.ToString());
+
+            //    }
+            //}
+            return 0.0;
+
+        }
+
+        private Tuple<bool, int> IsInteger(string value)
         {
             int result = 0;
             var isInteger = false;
-            if(int.TryParse(value, out result))
+            if (int.TryParse(value, out result))
             {
                 isInteger = true;
             }
@@ -87,10 +110,16 @@ namespace Winwink.LearnCsharpCollection.chapter5
             return new Tuple<bool, int>(isInteger, result);
         }
 
+        private bool IsOperator(char value)
+        {
+            var operatorList = "+-*/";
+            return operatorList.Contains(value);
+        }
+
         private double Calc(double value1, double value2, string op)
         {
             double result = 0.0;
-            switch(op)
+            switch (op)
             {
                 case "+":
                     result = value1 + value2;

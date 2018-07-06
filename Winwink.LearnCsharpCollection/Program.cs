@@ -34,7 +34,12 @@ namespace Winwink.LearnCsharpCollection
             //chapter4.chapter4.Main2();
 
             //chapter5.chapter5.Main1();
-            chapter5.chapter5.Main2();
+            //chapter5.chapter5.Main2();
+            //chapter5.RadixSort.Main1();
+            //chapter5.Exercises5_Infix_Postfix.InfixToPostfixTest();
+
+            chapter6.chapter6.Main1();
+
             Console.WriteLine("Input new line to close...");
             Console.ReadLine();
         }
